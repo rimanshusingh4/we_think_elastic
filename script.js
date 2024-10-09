@@ -1,3 +1,28 @@
+let lastScrollY = window.scrollY;
+const menu = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY) {
+    // Scroll down - hide the menu
+    // menu.style.top = '-100%'; // Adjust this value as per the menu's height
+    gsap.to("nav",{
+        opacity: 0,
+        duration: 0.5,
+        y: 50,
+    })
+
+} else {
+    // Scroll up - show the menu
+    gsap.to("nav",{
+        opacity: 1,
+        scale: 1,
+        duration: 0.7,
+        y: 0,
+    })
+  }
+  lastScrollY = window.scrollY;
+});
+
 var tl = gsap.timeline();
 
 tl.from("nav h1",{
@@ -60,6 +85,7 @@ gsap.to(".page3 h1",{
     scrollTrigger:{
         trigger: ".page3",// jb pin props use kreng to child hata dete hai keval parent ko trigger krte hai
         scroller: "body",
+        markers: true,
         start: "top 0%",
         end: "top -150%",
         scrub: 2,
