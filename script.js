@@ -1,3 +1,33 @@
+var tl = gsap.timeline();
+
+tl.from("nav h1",{
+    opacity: 0,
+    duration: 1,
+    y: -20,
+    delay: 0.5,
+})
+
+tl.from(".nav-part2 h4",{
+    opacity: 0,
+    duration: 0.3,
+    y: -20,
+    stagger: 0.3,
+})
+
+tl.from(".page1 h1",{
+    opacity: 0,
+    scale: 0.3,
+    y: 20,
+    duration: 1,
+    delay: 0.23,
+})
+
+
+//custom_cursor
+
+var custom_cursor = document.querySelector(".custom_cursor");
+var cursor = document.querySelector("")
+
 //svg modify
 var path = "M 10 100 Q 500 100 990 100";
 var finalPath = "M 10 100 Q 500 100 990 100";
