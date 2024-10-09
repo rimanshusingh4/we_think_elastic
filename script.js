@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
 
 var tl = gsap.timeline();
 
-tl.from("nav h1",{
+tl.from("nav img",{
     opacity: 0,
     duration: 1,
     y: -20,
@@ -45,6 +45,21 @@ tl.from(".page1 h1",{
     y: 20,
     duration: 1,
     delay: 0.23,
+})
+
+
+gsap.from(".video",{
+    scale:0.3,
+    duration: 5,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".video",
+        scroller: "body",
+        markers: true,
+        start: "top 90%",
+        end: "top 50%",
+        scrub: 2,
+    }
 })
 
 
@@ -85,7 +100,7 @@ gsap.to(".page3 h1",{
     scrollTrigger:{
         trigger: ".page3",// jb pin props use kreng to child hata dete hai keval parent ko trigger krte hai
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 0%",
         end: "top -150%",
         scrub: 2,

@@ -2,28 +2,27 @@
     padding: 0;
     margin: 
     0;
+
 }
 body{
     overflow-x: hidden;
     background-color: black;
+    @import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+
 }
 
 nav{
     position: fixed;
     width: 100vw;
     display: flex;
-    background-color: brown;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    cursor: pointer;
     transition: top 0.6s;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-nav h1{
-    font-size: 35px;
-    color: rgb(230, 215, 205);
-    font-weight: 900;
+nav img{
+    cursor: pointer;
 }
 .nav-part2{
     display: flex;
@@ -34,33 +33,88 @@ nav h1{
 }
 .nav-part2 h4{
     font-weight: 100;
-    color:antiquewhite;
+    font-size: 25px;
+    color:#E7BAAC;
+    cursor: pointer;
+
 }
 .page1{
     display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
-    background-color: antiquewhite;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .page1 h1{
-    font-size: 100px;
-    color: brown;
+    position: relative;
+    top: 10%;
+    font-size: 200px;
+    color: #fad98c;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.custom_cursor{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: red;
-    position: fixed;
+.page1 .sub{
+    display: flex;
+    position: relative;
+    font-size: 25px;
+    top: 13%;
+    color: #fad98c;
+    text-transform: uppercase;
 }
-.page2{
+
+.video {
+    width: 100vw;
+    height: 800px;
+    background-color: antiquewhite;
+    position: relative;
+    z-index: -1; /* Ensures it's above other content but below the navbar */
+    overflow: hidden; /* To prevent overflow issues during scaling */
+}
+
+video {
+    width: 100%; /* Ensures full width */
+    height: 100%; /* Ensures full height */
+    object-fit: cover; /* Makes sure the video covers the div without stretching */
+    position: relative;
+    z-index: -1;
+}
+
+
+.page2 {
+    display: flex;
     height: 100vh;
     width: 100%;
-    background-color: rgb(145, 104, 50);
+    background-color: black;
+    color: #E7BAAC;
+    font-size: 85px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.page2 h1 span{
+    font-size: 150px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.page2 .below {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+.page2 .below p{
+    font-size: 35px;
+    font-family:cursive;
+}
+.page2 .below h2{
+    font-size: 150px;
+}
+.page2 .below h2 span{
+    font-size: 150px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+
+
 #svg{
     width: 100%;
     height: 200px;
@@ -81,7 +135,7 @@ svg{
 }
 .page3 h1{
     font-size: 42vw;
-    color: whitesmoke;
+    color: #fffeb8;
     font-weight: 100;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
