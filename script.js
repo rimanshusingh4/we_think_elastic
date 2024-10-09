@@ -25,8 +25,8 @@ tl.from(".page1 h1",{
 
 //custom_cursor
 
-var custom_cursor = document.querySelector(".custom_cursor");
-var cursor = document.querySelector("")
+// var custom_cursor = document.querySelector(".custom_cursor");
+// var cursor = document.querySelector("")
 
 //svg modify
 var path = "M 10 100 Q 500 100 990 100";
@@ -60,7 +60,6 @@ gsap.to(".page3 h1",{
     scrollTrigger:{
         trigger: ".page3",// jb pin props use kreng to child hata dete hai keval parent ko trigger krte hai
         scroller: "body",
-        markers: true,
         start: "top 0%",
         end: "top -150%",
         scrub: 2,
