@@ -33,9 +33,9 @@ nav img{
     margin-right: 100px;
 }
 .nav-part2 h4{
-    font-weight: 100;
-    font-size: 25px;
-    color:#E7BAAC;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color:#e7cfb1;
     cursor: pointer;
 
 }
@@ -86,8 +86,8 @@ video {
     display: flex;
     height: 100vh;
     width: 100%;
-    background-color: black;
-    color: #E7BAAC;
+    /* background-color: black; */
+    color: #e7cfb1;
     font-size: 85px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -102,7 +102,7 @@ video {
 }
 .page2 .below p{
     font-size: 35px;
-    font-family:cursive;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .page2 .below h2{
     font-size: 150px;
@@ -127,7 +127,7 @@ video {
     justify-content: center;
     gap: 25px;
     align-items: start;
-    color: #fffeb8;
+    color: #fad98c;
     flex-direction: column;
     font-size: 40px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -145,7 +145,7 @@ video {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    color: #fffeb8;
+    color: #fad98c;
     font-size: 40px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 1;
@@ -163,24 +163,23 @@ video {
 #svg{
     width: 100%;
     height: 200px;
-    background-color: rgb(76, 137, 70);
+    /* background-color: rgb(76, 137, 70); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 svg{
-    background-color: rgb(76, 137, 70);
+    /* background-color: rgb(76, 137, 70); */
 }
 
 .page3{
     height: 100vh;
     width: 100%;
-    background-color: rgb(76, 137, 70);
+    background-color: #9ac1cb;
 
 }
 .page3 h1{
     font-size: 42vw;
-    color: #fffeb8;
-    font-weight: 100;
+    font-weight: 700;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
