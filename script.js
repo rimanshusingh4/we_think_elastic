@@ -3,8 +3,6 @@ const menu = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > lastScrollY) {
-    // Scroll down - hide the menu
-    // menu.style.top = '-100%'; // Adjust this value as per the menu's height
     gsap.to("nav",{
         opacity: 0,
         duration: 0.5,
@@ -55,7 +53,6 @@ gsap.from(".video",{
     scrollTrigger: {
         trigger: ".video",
         scroller: "body",
-        markers: true,
         start: "top 90%",
         end: "top 50%",
         scrub: 2,
@@ -65,8 +62,60 @@ gsap.from(".video",{
 
 //custom_cursor
 
-// var custom_cursor = document.querySelector(".custom_cursor");
-// var cursor = document.querySelector("")
+var custom_cursor = document.querySelector(".custom_cursor");
+var cursor = document.querySelector(".cursor")
+custom_cursor.addEventListener("mousemove", function(dets) {
+    var bounds = custom_cursor.getBoundingClientRect(); // Get the bounding box of the custom_cursor
+    gsap.to(cursor, {
+        x: dets.clientX - bounds.left,
+        y: dets.clientY - bounds.top,
+        duration: 0.5,
+    });
+});
+
+var video = document.querySelector(".custom_cursor .left");
+video.addEventListener("mouseenter",function(){
+    gsap.to(video,{
+        scale: 1.1,
+        delay: 0.2,
+    });
+    gsap.to(cursor, {
+        scale: 2,
+    })
+})
+
+video.addEventListener("mouseleave",function(){
+    gsap.to(video,{
+        scale: 1,
+        delay:0.2,
+    });
+    gsap.to(cursor,{
+        scale: 1,
+    })
+})
+
+var coffee = document.querySelector(".custom_cursor  img");
+coffee.addEventListener("mouseenter",function(){
+    gsap.to(coffee,{
+        scale: 1.1,
+        delay: 0.2,
+    });
+    gsap.to(cursor, {
+        scale: 2,
+    })
+})
+
+coffee.addEventListener("mouseleave",function(){
+    gsap.to(coffee,{
+        scale: 1,
+        delay:0.2,
+    });
+    gsap.to(cursor,{
+        scale: 1,
+    })
+})
+
+
 
 //svg modify
 var path = "M 10 100 Q 500 100 990 100";
