@@ -75,12 +75,14 @@ custom_cursor.addEventListener("mousemove", function(dets) {
 
 var video = document.querySelector(".custom_cursor .left");
 video.addEventListener("mouseenter",function(){
+    cursor.innerHTML = "→"
     gsap.to(video,{
         scale: 1.1,
         delay: 0.2,
     });
     gsap.to(cursor, {
-        scale: 2,
+        scale: 2.2,
+        backgroundColor: "#fad98c",
     })
 })
 
@@ -91,6 +93,8 @@ video.addEventListener("mouseleave",function(){
     });
     gsap.to(cursor,{
         scale: 1,
+        backgroundColor: "#c7c3bb3c",
+        
     })
 })
 
@@ -98,10 +102,10 @@ var coffee = document.querySelector(".custom_cursor  img");
 coffee.addEventListener("mouseenter",function(){
     gsap.to(coffee,{
         scale: 1.1,
-        delay: 0.2,
     });
     gsap.to(cursor, {
         scale: 2,
+        backgroundColor: "#fad98c",
     })
 })
 
@@ -112,6 +116,7 @@ coffee.addEventListener("mouseleave",function(){
     });
     gsap.to(cursor,{
         scale: 1,
+        backgroundColor: "#c7c3bb3c",
     })
 })
 

@@ -112,17 +112,20 @@ video {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.custom_cursor{
+.custom_cursor {
     height: 100vh;
     width: 100%;
-    /* background-color: #111; */
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 2; /* The overall container */
 }
-.custom_cursor .left{
+
+.custom_cursor .left {
     width: 50%;
     height: 70vh;
+    position: relative; /* This is important for stacking context */
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -130,12 +133,20 @@ video {
     color: #fad98c;
     flex-direction: column;
     font-size: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    z-index: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 3; /* Ensure this stays behind .overL */
 }
 
+.custom_cursor .left .overL {
+    width: 100%;
+    height: 85vh;
+    background-color: transparent;
+    position: absolute;
+    z-index: 5; /* Highest z-index to ensure it's above other elements */
+    pointer-events: none; /* Optional: Allows the cursor to pass through */
+}
 
-.custom_cursor .right{
+.custom_cursor .right {
     position: relative;
     top: 10%;
     gap: 15px;
@@ -147,17 +158,31 @@ video {
     align-items: start;
     color: #fad98c;
     font-size: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    z-index: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.cursor{
-    height: 20px;
-    width: 20px;
-    background-color: white;
+
+.custom_cursor .right .overR {
+    width: 100%;
+    height: 85vh;
+    background-color: transparent;
+    position: absolute;
+    z-index: 5; /* Highest z-index to ensure it's above other elements */
+    pointer-events: none; /* Optional: Allows the cursor to pass through */
+}
+
+.cursor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    background-color: #c7c3bb3c;
     border-radius: 50%;
     position: absolute;
-    z-index: 2;
+    z-index: 4; /* Higher than .custom_cursor, but lower than .overL */
+    pointer-events: none; /* Optional: Prevent blocking interactions */
 }
+
 
 
 #svg{
